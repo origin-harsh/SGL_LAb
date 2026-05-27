@@ -34,31 +34,31 @@ function App() {
           "Accurate results, compassionate care. Your health is our priority.",
       },
       {
-        image: "/public/image/slide6.jpeg",
+        image: "/image/slide6.jpeg",
         title: "Advanced Diagnostic Technology",
         subtitle:
           "State-of-the-art equipment for precise and reliable testing.",
       },
       {
-        image: "/public/image/slide3.jpeg",
+        image: "/image/slide3.jpeg",
         title: "Expert Medical Professionals",
         subtitle:
           "Our team of certified pathologists ensures quality you can trust.",
       },
         {
-        image: "/public/image/slide4.jpeg",
+        image: "/image/slide4.jpeg",
         title: "Expert Medical Professionals",
         subtitle:
           "Our team of certified pathologists ensures quality you can trust.",
       },
           {
-        image: "/public/image/slide5.jpeg",
+        image: "/image/slide5.jpeg",
         title: "Expert Medical Professionals",
         subtitle:
           "Our team of certified pathologists ensures quality you can trust.",
       },
           {
-        image: "/public/image/slide6.jpeg",
+        image: "/image/slide6.jpeg",
         title: "Expert Medical Professionals",
         subtitle:
           "Our team of certified pathologists ensures quality you can trust.",
@@ -126,7 +126,7 @@ function App() {
           {/* Logo Image */}
             <div className="w-20 h-30 flex items-center justify-center">
               <img
-                src="/public/image/Logo.png"
+                src="/image/Logo.png"
                 alt="Lab Logo"
                 className="w-full h-full object-contain"
               />
@@ -587,7 +587,7 @@ function App() {
             </div>
             <div className="order-1 lg:order-2">
               <img
-                src="public/imageimg12.jpeg"
+                src="/image/img12.jpeg"
                 alt="Medical Laboratory"
                 className="rounded-2xl shadow-xl w-50 h-50 object-cover"
               />
@@ -684,7 +684,7 @@ function App() {
               <div className="flex items-center gap-2 mb-6">
                 <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
                   <img
-                    src="public/image/Logo.png"
+                    src="/image/Logo.png"
                     alt="Lab Logo"
                     className="w-6 h-6 object-contain"
                   />

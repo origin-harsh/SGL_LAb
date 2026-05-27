@@ -28,37 +28,37 @@ function App() {
 
     const slides = [
       {
-        image: "/public/imageslide2.jpeg",
+        image: "/public/image/slide2.jpeg",
         title: "Trusted Pathology & Diagnostic Center",
         subtitle:
           "Accurate results, compassionate care. Your health is our priority.",
       },
       {
-        image: "/public/imageslide6.jpeg",
+        image: "/public/image/slide6.jpeg",
         title: "Advanced Diagnostic Technology",
         subtitle:
           "State-of-the-art equipment for precise and reliable testing.",
       },
       {
-        image: "/public/imageslide3.jpeg",
+        image: "/public/image/slide3.jpeg",
         title: "Expert Medical Professionals",
         subtitle:
           "Our team of certified pathologists ensures quality you can trust.",
       },
         {
-        image: "/public/imageslide4.jpeg",
+        image: "/public/image/slide4.jpeg",
         title: "Expert Medical Professionals",
         subtitle:
           "Our team of certified pathologists ensures quality you can trust.",
       },
           {
-        image: "/public/imageslide5.jpeg",
+        image: "/public/image/slide5.jpeg",
         title: "Expert Medical Professionals",
         subtitle:
           "Our team of certified pathologists ensures quality you can trust.",
       },
           {
-        image: "/public/imageslide6.jpeg",
+        image: "/public/image/slide6.jpeg",
         title: "Expert Medical Professionals",
         subtitle:
           "Our team of certified pathologists ensures quality you can trust.",
@@ -126,7 +126,7 @@ function App() {
           {/* Logo Image */}
             <div className="w-20 h-30 flex items-center justify-center">
               <img
-                src="public/imageLogo.png"
+                src="/public/image/Logo.png"
                 alt="Lab Logo"
                 className="w-full h-full object-contain"
               />
@@ -207,135 +207,186 @@ function App() {
       </nav>
 
       {/* Hero Carousel Section */}
-      <section id="home" className="relative h-screen pt-18">
+{/* Hero Carousel Section */}
+{/* Hero Carousel Section */}
+<section
+  id="home"
+  className="relative min-h-screen overflow-hidden"
+>
+  
+  {/* Slides */}
+  {slides.map((slide, index) => (
+    <div
+      key={index}
+      className={`absolute inset-0 transition-opacity duration-1000 ${
+        currentSlide === index ? "opacity-100" : "opacity-0"
+      }`}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A]/50 via-[#1E3A8A]/35 to-transparent z-10" />
+
+      <img
+        src={slide.image}
+        alt={slide.title}
+        className="w-full h-full object-cover"
+      />
+    </div>
+  ))}
+
+  {/* Hero Content */}
+  <div className="relative z-20 flex items-center min-h-screen px-4 pt-28 pb-52 sm:pb-36">
+    
+    <div className="max-w-7xl mx-auto w-full">
+      <div className="max-w-2xl">
+
         {slides.map((slide, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
-              currentSlide === index ? 'opacity-100' : 'opacity-0'
+            className={`transition-all duration-700 ${
+              currentSlide === index
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-8 absolute"
             }`}
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-[#1E3A8A]/50 via-[#1E3A8A]/35 to-transparent z-10" />
-            <img
-              src={slide.image}
-              alt={slide.title}
-              className="w-full h-full object-cover"
-            />
+            {currentSlide === index && (
+              <>
+                {/* Badge */}
+                <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm px-4 py-2 rounded-full text-white text-xs sm:text-sm font-medium mb-5 border border-cyan-300/30">
+                  <CheckCircle2 className="w-4 h-4 text-cyan-300" />
+                  Trusted Reports
+                </div>
+
+                {/* Heading */}
+                <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4">
+                  {slide.title}
+                </h1>
+
+                {/* Subtitle */}
+                <p className="text-base sm:text-xl text-gray-200 leading-relaxed mb-8">
+                  {slide.subtitle}
+                </p>
+
+                {/* Buttons */}
+                <div className="flex flex-col sm:flex-row gap-4">
+
+                  {/* Book Button */}
+                  <button
+                    onClick={() =>
+                      window.open(
+                        "https://wa.me/919410044144?text=Hello,%20I%20want%20to%20book%20a%20test",
+                        "_blank"
+                      )
+                    }
+                    className="w-full sm:w-auto bg-gradient-to-r from-cyan-500 to-[#1E3A8A] text-white px-6 py-3.5 rounded-full font-semibold hover:from-cyan-600 hover:to-[#172554] transition-all shadow-xl flex items-center justify-center gap-2 group"
+                  >
+                    Book Your Test
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </button>
+
+                  {/* Explore Button */}
+                  <button
+                    onClick={() => scrollToSection("tests")}
+                    className="w-full sm:w-auto border-2 border-cyan-400 text-white px-6 py-3.5 rounded-full font-semibold hover:bg-cyan-500/10 transition-all"
+                  >
+                    Explore Tests
+                  </button>
+                </div>
+              </>
+            )}
           </div>
         ))}
+      </div>
+    </div>
+  </div>
 
-        <div className="relative z-20 h-full flex items-center">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <div className="max-w-2xl">
-              {slides.map((slide, index) => (
-                <div
-                  key={index}
-                  className={`transition-all duration-700 ${
-                    currentSlide === index
-                      ? 'opacity-100 translate-y-0'
-                      : 'opacity-0 translate-y-8 absolute'
-                  }`}
-                >
-                 {currentSlide === index && (
-                    <>
-                      <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-white text-sm font-medium mb-6 border border-cyan-300/30">
-                        <CheckCircle2 className="w-4 h-4 text-cyan-300" />
-                        Trusted Reports
-                      </div>
+  {/* DESKTOP ONLY Carousel Navigation */}
+  <div className="hidden md:flex absolute bottom-32 left-1/2 transform -translate-x-1/2 z-30 items-center gap-4">
 
-                      <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                        {slide.title}
-                      </h1>
+    {/* Left */}
+    <button
+      onClick={() =>
+        setCurrentSlide(
+          (prev) => (prev - 1 + slides.length) % slides.length
+        )
+      }
+      className="p-3 bg-white/20 backdrop-blur-sm text-white rounded-full hover:bg-white/30 transition-all"
+    >
+      <ChevronLeft className="w-5 h-5" />
+    </button>
 
-                      <p className="text-lg sm:text-xl text-gray-200 mb-8 leading-relaxed">
-                        {slide.subtitle}
-                      </p>
+    {/* Dots */}
+    <div className="flex gap-2">
+      {slides.map((_, index) => (
+        <button
+          key={index}
+          onClick={() => setCurrentSlide(index)}
+          className={`w-3 h-3 rounded-full transition-all ${
+            currentSlide === index
+              ? "bg-white w-8"
+              : "bg-white/50"
+          }`}
+        />
+      ))}
+    </div>
 
-                      <div className="flex flex-wrap gap-4">
-                        
-                        {/* Book Test Button */}
-                        <button
-                          onClick={() =>
-                            window.open(
-                              "https://wa.me/919410044144?text=Hello, I want to book a test",
-                              "_blank"
-                            )
-                          }
-                          className="bg-gradient-to-r from-cyan-500 to-[#1E3A8A] text-white px-8 py-4 rounded-full font-semibold hover:from-cyan-600 hover:to-[#172554] transition-all shadow-2xl hover:shadow-cyan-500/30 flex items-center gap-2 group"
-                        >
-                          Book Your Test
-                          <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                        </button>
+    {/* Right */}
+    <button
+      onClick={() =>
+        setCurrentSlide((prev) => (prev + 1) % slides.length)
+      }
+      className="p-3 bg-white/20 backdrop-blur-sm text-white rounded-full hover:bg-white/30 transition-all"
+    >
+      <ChevronRight className="w-5 h-5" />
+    </button>
+  </div>
 
-                        {/* Explore Button */}
-                        <button
-                          onClick={() => scrollToSection("tests")}
-                          className="border-2 border-cyan-400 text-white px-8 py-4 rounded-full font-semibold hover:bg-cyan-500/10 hover:border-cyan-300 transition-all"
-                        >
-                          Explore Tests
-                        </button>
+  {/* Stats Bar */}
+  <div className="absolute bottom-0 left-0 right-0 bg-white/90 backdrop-blur-md z-20 border-t border-cyan-100">
+    
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
+      
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
 
-                      </div>
-                    </>
-                  )}
-                  
-                </div>
-              ))}
-            </div>
+        <div className="text-center">
+          <div className="text-2xl sm:text-3xl font-bold text-[#1E3A8A]">
+            10+
+          </div>
+          <div className="text-xs sm:text-sm text-gray-600 mt-1">
+            Years Experience
           </div>
         </div>
 
-        {/* Carousel Navigation */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30 flex items-center gap-4">
-          <button
-            onClick={() => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)}
-            className="p-3 bg-white/20 backdrop-blur-sm text-white rounded-full hover:bg-white/30 transition-all"
-          >
-            <ChevronLeft className="w-5 h-5" />
-          </button>
-          <div className="flex gap-2">
-            {slides.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all ${
-                  currentSlide === index ? 'bg-white w-8' : 'bg-white/50'
-                }`}
-              />
-            ))}
+        <div className="text-center">
+          <div className="text-2xl sm:text-3xl font-bold text-[#1E3A8A]">
+            30K+
           </div>
-          <button
-            onClick={() => setCurrentSlide((prev) => (prev + 1) % slides.length)}
-            className="p-3 bg-white/20 backdrop-blur-sm text-white rounded-full hover:bg-white/30 transition-all"
-          >
-            <ChevronRight className="w-5 h-5" />
-          </button>
+          <div className="text-xs sm:text-sm text-gray-600 mt-1">
+            Tests Conducted
+          </div>
         </div>
 
-        {/* Stats Bar */}
-        <div className="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-20 border-t border-gray-200">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-900">10+</div>
-                <div className="text-sm text-gray-600 mt-1">Years Experience</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-900">30K+</div>
-                <div className="text-sm text-gray-600 mt-1">Tests Conducted</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-900">200+</div>
-                <div className="text-sm text-gray-600 mt-1">Test Types</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-900">24/7</div>
-                <div className="text-sm text-gray-600 mt-1">Support Available</div>
-              </div>
-            </div>
+        <div className="text-center">
+          <div className="text-2xl sm:text-3xl font-bold text-[#1E3A8A]">
+            200+
+          </div>
+          <div className="text-xs sm:text-sm text-gray-600 mt-1">
+            Test Types
           </div>
         </div>
-      </section>
+
+        <div className="text-center">
+          <div className="text-2xl sm:text-3xl font-bold text-[#1E3A8A]">
+            24/7
+          </div>
+          <div className="text-xs sm:text-sm text-gray-600 mt-1">
+            Support Available
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Book Now Section */}
       <section className="py-20 bg-gradient-to-br from-blue-900 via-blue-900 to-blue-500 relative overflow-hidden">

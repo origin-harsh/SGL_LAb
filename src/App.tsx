@@ -684,7 +684,7 @@ function App() {
               <div className="flex items-center gap-2 mb-6">
                 <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
                   <img
-                    src="public/imageLogo.png"
+                    src="public/image/Logo.png"
                     alt="Lab Logo"
                     className="w-6 h-6 object-contain"
                   />

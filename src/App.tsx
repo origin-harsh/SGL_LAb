@@ -431,7 +431,7 @@ function App() {
               Comprehensive Pathology Tests
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              We offer a wide range of diagnostic tests with accurate results and quick turnaround time.
+              We offer a wide range of pathology tests with accurate results and quick turnaround time.
             </p>
           </div>
 

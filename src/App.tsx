@@ -132,8 +132,8 @@ function App() {
               />
             </div>
               <div>
-                <span className="text-2xl font-bold  text-[#16A34A]">Saraswati Good</span>
-                <span className="text-2xl font-bold text-[#1E3A8A]"> Lab</span>
+                <span className="text-2xl font-bold  text-[#16A34A]">Saraswati Good Life</span>
+                <span className="text-2xl font-bold text-[#1E3A8A]"> Pathology Lab</span>
               </div>
             </div>
 

@@ -28,37 +28,37 @@ function App() {
 
     const slides = [
       {
-        image: "/image/slide2.jpeg",
+        image: "/public/imageslide2.jpeg",
         title: "Trusted Pathology & Diagnostic Center",
         subtitle:
           "Accurate results, compassionate care. Your health is our priority.",
       },
       {
-        image: "/image/slide6.jpeg",
+        image: "/public/imageslide6.jpeg",
         title: "Advanced Diagnostic Technology",
         subtitle:
           "State-of-the-art equipment for precise and reliable testing.",
       },
       {
-        image: "/image/slide3.jpeg",
+        image: "/public/imageslide3.jpeg",
         title: "Expert Medical Professionals",
         subtitle:
           "Our team of certified pathologists ensures quality you can trust.",
       },
         {
-        image: "/image/slide4.jpeg",
+        image: "/public/imageslide4.jpeg",
         title: "Expert Medical Professionals",
         subtitle:
           "Our team of certified pathologists ensures quality you can trust.",
       },
           {
-        image: "/image/slide5.jpeg",
+        image: "/public/imageslide5.jpeg",
         title: "Expert Medical Professionals",
         subtitle:
           "Our team of certified pathologists ensures quality you can trust.",
       },
           {
-        image: "/image/slide6.jpeg",
+        image: "/public/imageslide6.jpeg",
         title: "Expert Medical Professionals",
         subtitle:
           "Our team of certified pathologists ensures quality you can trust.",
@@ -126,7 +126,7 @@ function App() {
           {/* Logo Image */}
             <div className="w-20 h-30 flex items-center justify-center">
               <img
-                src="image/Logo.png"
+                src="public/imageLogo.png"
                 alt="Lab Logo"
                 className="w-full h-full object-contain"
               />
@@ -536,7 +536,7 @@ function App() {
             </div>
             <div className="order-1 lg:order-2">
               <img
-                src="image/img12.jpeg"
+                src="public/imageimg12.jpeg"
                 alt="Medical Laboratory"
                 className="rounded-2xl shadow-xl w-50 h-50 object-cover"
               />
@@ -633,7 +633,7 @@ function App() {
               <div className="flex items-center gap-2 mb-6">
                 <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
                   <img
-                    src="image/Logo.png"
+                    src="public/imageLogo.png"
                     alt="Lab Logo"
                     className="w-6 h-6 object-contain"
                   />

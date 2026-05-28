@@ -28,14 +28,14 @@ function App() {
 
     const slides = [
       {
-        image: "/public/image/slide2.jpeg",
-        title: "Trusted Pathology & Diagnostic Center",
+        image: "/image/slide2.jpeg",
+        title: "Trusted Pathology Center",
         subtitle:
           "Accurate results, compassionate care. Your health is our priority.",
       },
       {
         image: "/image/slide6.jpeg",
-        title: "Advanced Diagnostic Technology",
+        title: "Advanced Technology",
         subtitle:
           "State-of-the-art equipment for precise and reliable testing.",
       },
@@ -47,7 +47,7 @@ function App() {
       },
         {
         image: "/image/slide4.jpeg",
-        title: "Expert Medical Professionals",
+        title: "Your Health, Our Priority – SGL Pathology Services",
         subtitle:
           "Our team of certified pathologists ensures quality you can trust.",
       },
@@ -59,9 +59,9 @@ function App() {
       },
           {
         image: "/image/slide6.jpeg",
-        title: "Expert Medical Professionals",
+        title: "Home Collection Available",
         subtitle:
-          "Our team of certified pathologists ensures quality you can trust.",
+          "Book Your Home Collection - Now",
       },
     ];
 
@@ -80,14 +80,22 @@ function App() {
     setIsMenuOpen(false);
   };
 
-  const tests = [
-    { icon: Droplets, name: 'Blood Test', description: 'Complete blood profile analysis', tests: '50+ Parameters' },
-    { icon: Activity, name: 'Thyroid Test', description: 'TSH, T3, T4 thyroid panel', tests: '6 Parameters' },
-    { icon: Heart, name: 'Diabetes Test', description: 'HbA1c, Fasting & PP Glucose', tests: '4 Parameters' },
-    { icon: Beaker, name: 'CBC', description: 'Complete blood count analysis', tests: '24 Parameters' },
-    { icon: Shield, name: 'Vitamin D Test', description: '25-Hydroxy Vitamin D level', tests: '2 Parameters' },
-    { icon: FlaskConical, name: 'Liver Function Test', description: 'Comprehensive liver panel', tests: '12 Parameters' },
-  ];
+const tests = [
+  { icon: Droplets, name: 'Blood Test', description: 'Complete blood profile analysis', tests: '50+ Parameters' },
+  { icon: Activity, name: 'Thyroid Test', description: 'TSH, T3, T4 thyroid panel', tests: '6 Parameters' },
+  { icon: Heart, name: 'Diabetes Test', description: 'HbA1c, Fasting & PP Glucose', tests: '4 Parameters' },
+  { icon: Beaker, name: 'CBC', description: 'Complete blood count analysis', tests: '24 Parameters' },
+  { icon: Shield, name: 'Vitamin D Test', description: '25-Hydroxy Vitamin D level', tests: '2 Parameters' },
+  { icon: FlaskConical, name: 'Liver Function Test', description: 'Comprehensive liver panel', tests: '12 Parameters' },
+
+  // Extra General Card
+  { 
+    icon: Stethoscope, 
+    name: 'Many More Tests', 
+    description: 'Full range of pathology & diagnostic services available', 
+    tests: '100+ Tests' 
+  },
+];
 
   const packages = [
     {
@@ -128,12 +136,12 @@ function App() {
               <img
                 src="/image/Logo.png"
                 alt="Lab Logo"
-                className="w-full h-full object-contain"
+                className="w-20 h-20 object-contain"
               />
             </div>
               <div>
-                <span className="text-2xl font-bold  text-[#16A34A]">Saraswati Good Life</span>
-                <span className="text-2xl font-bold text-[#1E3A8A]"> Pathology Lab</span>
+                <span className="text-xl font-bold  text-[#16A34A]">Saraswati Good Life</span>
+                <span className="text-xl font-bold text-[#1E3A8A]"> Pathology Lab</span>
               </div>
             </div>
 
@@ -223,7 +231,7 @@ function App() {
       }`}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A]/50 via-[#1E3A8A]/35 to-transparent z-10" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0B1120]/45 via-[#1D4ED8]/15 to-transparent z-10" />
 
       <img
         src={slide.image}
@@ -544,7 +552,7 @@ function App() {
                 Your Trusted Partner in Healthcare Diagnostics
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                 Saraswati Good Lab is a trusted pathology and diagnostic center dedicated to providing accurate and reliable healthcare testing services. We are committed to delivering quality diagnostics with advanced technology, hygienic practices, and patient-focused care to ensure trustworthy medical reports for every patient.
+                 Saraswati Good Lab is a trusted pathology center dedicated to providing accurate and reliable healthcare testing services. We are committed to delivering quality diagnostics with advanced technology, hygienic practices, and patient-focused care to ensure trustworthy medical reports for every patient.
               </p>
               <div className="grid grid-cols-2 gap-6 mb-8">
                 <div className="bg-white p-5 rounded-xl">

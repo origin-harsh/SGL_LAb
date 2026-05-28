@@ -29,19 +29,19 @@ function App() {
 
     const slides = [
       {
-        image: "/image/slide2.jpeg",
+        image: "/image/Logo.png",
         title: "Trusted Pathology Center",
         subtitle:
           "Accurate results, compassionate care. Your health is our priority.",
       },
       {
-        image: "/image/slide6.jpeg",
+        image: "/image/slide2.jpeg",
         title: "Advanced Technology",
         subtitle:
           "State-of-the-art equipment for precise and reliable testing.",
       },
       {
-        image: "/image/slide3.jpeg",
+        image: "/image/img12.jpeg",
         title: "Expert Medical Professionals",
         subtitle:
           "Our team of certified pathologists ensures quality you can trust.",
@@ -59,7 +59,7 @@ function App() {
           "Our team of certified pathologists ensures quality you can trust.",
       },
           {
-        image: "/image/slide6.jpeg",
+        image: "/image/slide1.jpeg",
         title: "Home Collection Available",
         subtitle:
           "Book Your Home Collection - Now",

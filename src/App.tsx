@@ -19,7 +19,8 @@ import {
   Beaker,
   FlaskConical,
   CheckCircle2,
-  ArrowRight
+  ArrowRight,
+  Stethoscope
 } from 'lucide-react';
 
 function App() {

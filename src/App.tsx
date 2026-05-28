@@ -625,7 +625,7 @@ const tests = [
             <div className="lg:col-span-2">
               <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-200">
                 <iframe
-                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3030.156153503933!2d79.42602907772822!3d28.387704632779187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a006e36195f261%3A0x8356af341a4b8346!2sGulmohar%20Park%2C%20Central%20Bareilly!5e1!3m2!1sen!2sin!4v1779880355634!5m2!1sen!2sin"
+                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d576.2259673032019!2d79.43029984132008!3d28.388363442261554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a00700169af2d5%3A0xdc1ab1fb587e8ad4!2sSaraswati%20Good%20Life%20Pathology%20Lab!5e1!3m2!1sen!2sin!4v1779947092208!5m2!1sen!2sin"
                   height="400"
                   width="100%"
                   style={{ border: 0 }}
